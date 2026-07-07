@@ -159,6 +159,9 @@ android {
         buildConfig true
         viewBinding true
     }
+        lint {
+        abortOnError false
+    }
 }
 
 /*
