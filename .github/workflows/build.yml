@@ -32,6 +32,11 @@ jobs:
         with:
           cmake-version: '3.30.3'
 
+      - name: Install Android NDK
+        run: |
+          yes | sdkmanager --licenses
+          sdkmanager --install "ndk;26.1.10909125"
+
       - name: Build project
         run: |
           chmod +x ./gradlew
